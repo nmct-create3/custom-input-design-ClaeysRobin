@@ -60,10 +60,10 @@
     /* global input styles */
     --global-input-backgroundColor: White;
     --global-input-color: var(--global-color-neutral-xxxx-dark);
-    --global-input-borderColor: var(--global-color-neutral-xxx-light);
+    --global-input-borderColor: #E2E3E7;
     --global-input-hover-borderColor: var(--global-color-neutral-xx-light);
     --global-input-focus-borderColor: var(--global-color-alpha);
-    --global-input-boxShadow: 0 0 0 3px var(--global-color-alpha-x-transparent);
+    --global-input-boxShadow: 0 0 0 1px #3385FF;
 }
 
 /*------------------------------------*\
@@ -637,12 +637,37 @@ input::placeholder {
     margin-right: var(--global-whitespace-sm);
 }
 
+.c-custom-option{
+    display: flex;
+    align-items: center;
+}
+
+
+.c-custom-option__fake-input{
+    display: flex;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--global-input-borderColor);
+    margin: 0 8px;
+}
+
+.c-custom-option__fake-input--checkbox{
+    border-radius: 3px;
+}
+
+.c-custom-option__fake-input--radio{
+    border-radius: 100%;
+}
+
+.c-custom-option__symbol{
+    opacity: 0;
+}
+
 .c-option--hidden:checked + .c-custom-option {
     /*
       Do magic stuff here, for example:
       background-color: red;
     */
-    background-color: rebeccapurple;
   }
 
   .c-option--hidden:checked + .c-custom-option .c-custom-option__symbol {
@@ -650,7 +675,6 @@ input::placeholder {
       Do magic stuff here, for example:
       fill: blue;
     */
-    fill: blue;
   }
 
 /*
