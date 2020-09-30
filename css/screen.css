@@ -637,6 +637,22 @@ input::placeholder {
     margin-right: var(--global-whitespace-sm);
 }
 
+.c-option--hidden:checked + .c-custom-option {
+    /*
+      Do magic stuff here, for example:
+      background-color: red;
+    */
+    background-color: rebeccapurple;
+  }
+
+  .c-option--hidden:checked + .c-custom-option .c-custom-option__symbol {
+    /*
+      Do magic stuff here, for example:
+      fill: blue;
+    */
+    fill: blue;
+  }
+
 /*
     Component: Label
     ---
